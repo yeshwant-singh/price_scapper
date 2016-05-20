@@ -30,7 +30,7 @@ public class InitiateDriver
             String url = System.getProperty("url") == null ? getProperties().get("URL") : System.getProperty("url");
             String username = System.getenv("BROWSERSTACK_USER");
             String accessKey = System.getenv("BROWSERSTACK_ACCESSKEY");
-            String HUB_URL = "https://%s:%s@%s";
+            String HUB_URL = "http://%s:%s@%s";
             String browser = null;
             browser = System.getProperty("browser") == null ? getProperties().get("BROWSER") : System.getProperty("browser");
             DesiredCapabilities capabilities = null;
@@ -38,6 +38,8 @@ public class InitiateDriver
             capabilities.setBrowserName("firefox");
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
             capabilities.setPlatform(Platform.ANY);
+            capabilities.setCapability("browserstack.local","true");
+            //capabilities.setCapability("browserstack.localIdentifier", System.getenv("BUILD_ID"));
             System.out.println(String.format(HUB_URL, username, accessKey,url));
             driver = new RemoteWebDriver(new URL(String.format(HUB_URL, username, accessKey,url)), capabilities);
             driver.manage().window().maximize();

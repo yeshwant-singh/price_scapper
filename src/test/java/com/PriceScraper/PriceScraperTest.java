@@ -31,7 +31,7 @@ public class PriceScraperTest
         logger = LogFactory.getLog(this.getClass().getName());
         InitiateDriver initiateDriver = new InitiateDriver();
         driver = initiateDriver.getDriver();
-
+        System.out.println("my Sessiom"+driver.getSessionId());
         try
         {
             driver.get("http://www.amazon.in");
