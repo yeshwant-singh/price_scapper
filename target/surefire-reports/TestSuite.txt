@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 83.894 sec <<< FAILURE! - in TestSuite
+priceScrapeTest(com.PriceScraper.PriceScraperTest)  Time elapsed: 68.119 sec  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.51.0', revision: '1af067d', time: '2016-02-05 19:15:17'
+System info: host: '185-129-70-41', ip: '185.129.70.41', os.name: 'windows', os.arch: 'x86', os.version: '5.2', java.version: '1.8.0_40'
+Driver info: driver.version: unknown
+Command duration or timeout: 16.09 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'Yeshwants-MacBook-Air.local', ip: '10.100.101.134', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_66'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webdriver.remote.sessionid=98e15ae4027f341544dab166445921594aeef3d0, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 98e15ae4027f341544dab166445921594aeef3d0
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:178)
+	at com.PriceScraper.PriceScraperPage.getfPrices(PriceScraperPage.java:64)
+	at com.PriceScraper.PriceScraperTest.priceScrapeTest(PriceScraperTest.java:65)
+Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.51.0', revision: '1af067d', time: '2016-02-05 19:15:17'
+System info: host: '185-129-70-41', ip: '185.129.70.41', os.name: 'windows', os.arch: 'x86', os.version: '5.2', java.version: '1.8.0_40'
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'Yeshwants-MacBook-Air.local', ip: '10.100.101.134', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_66'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9407)
+	at <anonymous class>.Utils.getElementAt(file:///C:/Windows/proxy/anonymous5495240272309485165webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8992)
+	at <anonymous class>.WebElement.getElementText(file:///C:/Windows/proxy/anonymous5495240272309485165webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12033)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/proxy/anonymous5495240272309485165webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12602)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/proxy/anonymous5495240272309485165webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:623)
+

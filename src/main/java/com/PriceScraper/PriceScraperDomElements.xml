@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<elements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../../resources/DOMElements.xsd">
+    <element name="aSearchBar">
+        <id>twotabsearchtextbox</id>
+    </element>
+
+    <element name="aSearchKey">
+        <xpath>//input[@value='Go']</xpath>
+    </element>
+
+    <element name="aSmartphones">
+        <xpath>//li[@style='margin-left: 34px']/a</xpath>
+        <!--<name>Smartphones</name>-->
+        <!--<xpath>//a[@href='/s/ref=sr_nr_n_1?fst=as%3Aoff&amp;rh=n%3A976419031%2Cn%3A1389401031%2Cn%3A1805560031%2Ck%3Aiphone&amp;keywords=iphone&amp;ie=UTF8&amp;qid=1462461431&amp;rnid=976420031']</xpath>-->
+    </element>
+
+    <element name="aPrices">
+        <class>s-price</class>
+    </element>
+
+    <element name="fSearchBar">
+        <class>LM6RPg</class>
+    </element>
+
+    <element name="fSearchKey">
+        <class>vh79eN</class>
+    </element>
+
+    <element name="fSmartphones">
+        <xpath>//a[@path='mobiles']</xpath>
+    </element>
+
+    <element name="fPrices">
+        <class>fk-font-17</class>
+    </element>
+
+</elements>
