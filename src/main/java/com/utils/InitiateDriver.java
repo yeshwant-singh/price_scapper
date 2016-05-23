@@ -36,7 +36,9 @@ public class InitiateDriver
             DesiredCapabilities capabilities = null;
             capabilities = DesiredCapabilities.firefox();
             capabilities.setBrowserName("firefox");
-            capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+            //capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true
+            capabilities.setCapability("browserstack.local", System.getenv("BROWSERSTACK_LOCAL"));
+            capabilities.setCapability("browserstack.localIdentifier", System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER"));
             capabilities.setPlatform(Platform.ANY);
             System.out.println(String.format(HUB_URL, username, accessKey,url));
             driver = new RemoteWebDriver(new URL(String.format(HUB_URL, username, accessKey,url)), capabilities);

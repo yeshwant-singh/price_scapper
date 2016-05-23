@@ -1,6 +1,5 @@
 package com.PriceScraper;
 
-import com.TestBase;
 import com.utils.InitiateDriver;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -31,6 +30,7 @@ public class PriceScraperTest
         logger = LogFactory.getLog(this.getClass().getName());
         InitiateDriver initiateDriver = new InitiateDriver();
         driver = initiateDriver.getDriver();
+        System.out.println("my session"+driver.getSessionId());
 
         try
         {
