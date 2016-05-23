@@ -9,8 +9,8 @@
     <version>1.0</version>
 
     <properties>
-        <source>1.7</source>
-        <target>1.7</target>
+        <source>1.6</source>
+        <target>1.6</target>
     </properties>
 
     <dependencies>
@@ -35,12 +35,12 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.48.2</version>
+            <version>2.46.0</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.9.9</version>
+            <version>6.8.21</version>
         </dependency>
 
         <dependency>
@@ -49,23 +49,22 @@
             <version>1.1</version>
         </dependency>
 
-       <dependency>
-        <groupId>com.browserstack.automate</groupId>
-        <artifactId>maven-testassist</artifactId>
-        <version>1.0-SNAPSHOT</version>
-       </dependency>
+        <dependency>
+            <groupId>com.browserstack</groupId>
+            <artifactId>automate-maven-plugin</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
         <build>
         <plugins>
             <plugin>
-                <groupId>com.browserstack.automate</groupId>
-                <artifactId>maven-testassist</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>com.browserstack</groupId>
+                <artifactId>automate-maven-plugin</artifactId>
+                <version>0.1-SNAPSHOT</version>
                 <configuration>
-                    <source>${source}</source>
-                    <target>${target}</target>
-                    <complianceLevel>${target}</complianceLevel>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
                 <executions>
                     <execution>
@@ -102,11 +101,13 @@
                     <threadCount>4</threadCount>
                 </configuration>
                 <dependencies>
+                 <!--
                     <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-junit47</artifactId>
                         <version>2.17</version>
                     </dependency>
+                  -->
                     <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-testng</artifactId>
@@ -117,11 +118,17 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
     <pluginRepositories>
         <pluginRepository>
-            <id>shirish87-github</id>
-            <name>Plugin Repository</name>
-            <url>https://raw.github.com/shirish87/browserstack-automate-java/mvn-maven-testassist</url>
+            <id>github</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </pluginRepository>
     </pluginRepositories>
 
